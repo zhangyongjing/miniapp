@@ -38,7 +38,7 @@ Running in the foreground: when user firstly opens a MiniApp, it is in the state
 Running in the background: when user closes the MiniApp, or leaves the hosted Native App, the MiniApp will not be destroyed 
 directly. Instead, it will switch to run in the background.
 
-Switching from running in the background to foreground: when the have-not-been-destroyed MiniApp is reopened, it will switch 
+Switching from running in the background to foreground: when the has-not-been-destroyed MiniApp is reopened, it will switch 
 from running in the background to running in the foreground.
 
 * Destroy
@@ -113,3 +113,52 @@ Page({
   },
 });
 ```
+
+
+## Comparison with some related work in W3C (such as [Page Visibility](https://w3c.github.io/page-visibility/) and [Page Lifecycle](https://wicg.github.io/page-lifecycle/))
+
+<table>
+    <thead>
+        <tr class="thead-first-child">
+          <th align="left"> MiniApp Lifecycle States</th>
+          <th align="left"> Lifecycle States defined by existing W3C specs </th>
+        </tr>
+    </thead>
+        <tr class="tbody-first-child">
+          <td align="left"> Application Launched </td>
+          <td align="left"> N/A </td>
+        </tr>
+        <tr class="tbody-first-child">
+          <td align="left"> Application Shown </td>
+          <td align="left"> N/A </td>
+        </tr>
+        <tr class="tbody-first-child">
+          <td align="left"> Application Hidden </td>
+          <td align="left"> N/A </td>
+        </tr>
+        <tr class="tbody-first-child">
+          <td align="left"> Application Error </td>
+          <td align="left"> N/A </td>
+        </tr>
+        <tr class="tbody-first-child">
+          <td align="left"> Page Loaded </td>
+          <td align="left"> N/A </td>
+        </tr>
+        <tr class="tbody-first-child">
+          <td align="left"> Page Ready </td>
+          <td align="left"> N/A </td>
+        </tr>
+        <tr class="tbody-first-child">
+          <td align="left"> Page Shown </td>
+          <td align="left"> Visible (https://w3c.github.io/page-visibility/#visibility-states) </td>
+        </tr>
+        <tr class="tbody-first-child">
+          <td align="left"> Page Hidden </td>
+          <td align="left"> Hidden (https://w3c.github.io/page-visibility/#visibility-states) </td>
+        </tr>
+        <tr class="tbody-first-child">
+          <td align="left"> Page Unloaded </td>
+          <td align="left"> Discarded (https://wicg.github.io/page-lifecycle/#sec-lifecycle-states) </td>
+        </tr>
+        
+</table>
